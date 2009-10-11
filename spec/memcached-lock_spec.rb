@@ -80,6 +80,6 @@ describe MemcachedLock do
       $memcache.get("lock/lock_key").should_not == nil
       $lock.release_lock("lock_key")
       $memcache.get("lock/lock_key").should == nil
+    end
   end
 end
-  end
