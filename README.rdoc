@@ -1,6 +1,29 @@
-= memcached-lock
+= memcache-lock
 
-Description goes here.
+This is a pure extraction from Nick Kallen's {cache-money}[http://github.com/nkallen/cache-money].
+
+= Installation
+
+Then, install memcache-lock
+
+  sudo gem install memcache-lock -s http://gemcutter.org
+
+(Note: If you already have the gemcutter gem installed, you can omit the -s part)
+
+= Usage
+
+Instantiate the lock somewhere, like in an initializer if you're using rails. It needs a MemCache instance.
+
+  $cache = MemCache.new(YAML.load(File.read("/path/to/memcache/config")))
+  $lock  = MemcacheLock.new($cache)
+
+Then, wherever you'd like to lock a key, use it like this:
+
+  $lock.synchronize("some-memcache-key") do
+    # stuff that needs synchronization in here
+  end
+
+For more info, see lib/memcache-lock.rb. It's very straightforward to read.
 
 == Note on Patches/Pull Requests
  
@@ -13,6 +36,3 @@ Description goes here.
    bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
-== Copyright
-
-Copyright (c) 2009 James Golick. See LICENSE for details.

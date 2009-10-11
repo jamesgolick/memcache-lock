@@ -11,6 +11,7 @@ begin
     gem.homepage = "http://github.com/giraffesoft/memcache-lock"
     gem.authors = ["James Golick"]
     gem.add_development_dependency "rspec"
+    gem.add_dependency "memcache-client", ">= 1.7.4"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError
