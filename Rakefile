@@ -13,8 +13,8 @@ begin
     gem.add_development_dependency "rspec"
     gem.add_dependency "memcache-client", ">= 1.7.4"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
-    Jeweler::GemcutterTasks.new
   end
+  Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
 end
