@@ -4,11 +4,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "memcached-lock"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.name = "memcache-lock"
+    gem.summary = %Q{Memcache key lock, extracted from cache-money.}
+    gem.description = %Q{Memcache key lock, extracted from cache-money.}
     gem.email = "james@giraffesoft.ca"
-    gem.homepage = "http://github.com/giraffesoft/memcached-lock"
+    gem.homepage = "http://github.com/giraffesoft/memcache-lock"
     gem.authors = ["James Golick"]
     gem.add_development_dependency "rspec"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
@@ -42,7 +42,7 @@ Rake::RDocTask.new do |rdoc|
   end
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "memcached-lock #{version}"
+  rdoc.title = "memcache-lock #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

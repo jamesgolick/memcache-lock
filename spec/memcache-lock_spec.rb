@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'spec_helper')
 
-describe MemcachedLock do
+describe MemcacheLock do
   describe '#synchronize' do
     it "yields the block" do
       block_was_called = false

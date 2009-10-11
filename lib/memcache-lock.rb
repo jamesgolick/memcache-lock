@@ -1,4 +1,4 @@
-class MemcachedLock
+class MemcacheLock
   class Error < RuntimeError; end
 
   DEFAULT_RETRY = 5
