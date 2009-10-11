@@ -4,8 +4,6 @@ This is a pure extraction from Nick Kallen's {cache-money}[http://github.com/nka
 
 = Installation
 
-Then, install memcache-lock
-
   sudo gem install memcache-lock -s http://gemcutter.org
 
 (Note: If you already have the gemcutter gem installed, you can omit the -s part)
